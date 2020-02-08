@@ -7,11 +7,10 @@ export const getSmurf = () => dispatch => {
         axios
             .get("http://localhost:3333/smurfs")
             .then(res => {
-                console.log(res);
                 dispatch({ type: GET_SMURF, payload: res.data })
             })
             .catch(err => {
-                console.err("error fetching data from api", err);
+                console.err(err);
             });
     });
 };
@@ -26,7 +25,7 @@ export const postSmurf = addSmurf => dispatch => {
             dispatch({ type: POST_SMURF, payload: addSmurf });
         })
         .catch(err => {
-            console.log("error in posting data to the api", err);
+            console.log(err);
         });
     });
 };

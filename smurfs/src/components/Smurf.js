@@ -10,10 +10,10 @@ const Smurf = props => {
   return (
     <div>
       {props.smurf.map(smurf => (
-        <div key={smurf.id}>
-          <p>Name: {smurf.name}</p>
-          <p>Age: {smurf.age}</p>
-          <p>Height: {smurf.height}</p>
+        <div key={smurf.id} className="smurf">
+          <p><span>Name:</span> {smurf.name}</p>
+          <p><span>Age:</span> {smurf.age}</p>
+          <p><span>Height:</span> {smurf.height}</p>
         </div>
       ))}
     </div>
