@@ -11,9 +11,9 @@ const Smurf = props => {
     <div>
       {props.smurf.map(smurf => (
         <div key={smurf.id}>
-          <p>Name: {props.smurf.name}</p>
-          <p>Age: {props.smurf.age}</p>
-          <p>Height: {props.smurf.age}</p>
+          <p>Name: {smurf.name}</p>
+          <p>Age: {smurf.age}</p>
+          <p>Height: {smurf.height}</p>
         </div>
       ))}
     </div>

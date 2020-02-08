@@ -14,8 +14,14 @@ const SmurfForm = props => {
         setNewSmurf({ ...newSmurf, [e.target.name]: e.target.value })
     }
 
-    const handleAdd = addSmurf => {
-        props.postSmurf(addSmurf);
+    const handleAdd = e => {
+        e.preventDefault();
+        props.postSmurf(newSmurf);
+        setNewSmurf({
+            name: "",
+            age: "",
+            height: ""
+        })
     };
 
   return (
